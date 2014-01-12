@@ -254,7 +254,7 @@ multitask :push do
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## Copying #{public_dir} to #{deploy_dir}"
-  cp_r "#{public_dir}/.", deploy_dir
+  cp_r "#{public_dir}/wedding/.", deploy_dir
   cd "#{deploy_dir}" do
     system "git add -A"
     puts "\n## Committing: Site updated at #{Time.now.utc}"
