@@ -1,0 +1,42 @@
+---
+layout: page
+title: "Contact"
+date: 2014-01-30 20:00
+footer: true
+head: |
+    <script type="text/javascript">
+        function validateform() {
+            if (!document.contactform.from.value.match(/\S/)) {
+                alert("Please give us your name");
+                document.contactform.from.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+---
+
+<form action="http://getsimpleform.com/messages?form_api_token=ccaa2ac9f01672faf35fb5af9aa1c45e" method="post" name="contactform" id="contactform" onsubmit="return validateform()">
+    <input type="hidden" name="redirect_to" value="{{site.url}}rsvp/return.html" />
+
+    <div class="formsection">
+        <label class="formheader" for="from">Your Name:</label>
+        <input type="text" name="from" tabindex="1" value="" />
+    </div>
+    <div class="formsection">
+    <label class="formheader" for="attend">Attending:</label>
+        <input id="attend-yes" name="attend" type="radio" value="Yes" tabindex="2" checked="checked"/>
+        <label class="radiolabel" for="attend-yes">Yes</label>
+        <input id="attend-no" name="attend" type="radio" value="No" tabindex="3"/>
+        <label class="radiolabel" for="attend-no">No</label>
+    </div>
+    <div class="formsection">
+        <label class="formheader" for="message">A message:</label>
+        <textarea name="message" tabindex="4" rows="5" cols="50" ></textarea>
+    </div>
+    <div class="formsection">
+        <label class="formheader" for="submit">&nbsp;</label>
+        <input type="submit" name="submit" value="Send" tabindex="5" />
+    </div>
+</form>
