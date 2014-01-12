@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+<div id="header">
+    <div id="introtext">
+        <span class="head-bride">{{site.bride}}&nbsp;</span>
+        <span class="head-groom">&amp;</span>
+        <span class="head-bride">{{site.groom}}</span>
+        <div class="date">{{site.date| date: "%B %-d" | upcase}}<sup>{% case page.date | date: "%-d" %}{% when "1" or "21" or "31" %}st{% when "2" or "22" %}nd{% when "3" or "23" %}rd{% else %}th{% endcase %}</sup>, {{site.date| date: "%Y"}}</div>
+    </div>
+</div>

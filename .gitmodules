@@ -1,0 +1,3 @@
+[submodule ".themes/responsive-wedding"]
+	path = .themes/responsive-wedding
+	url = git@github.com:jamielennox/responsive-wedding.git
