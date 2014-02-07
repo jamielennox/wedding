@@ -1,0 +1,40 @@
+---
+layout: page
+title: "location"
+date: 2014-01-13 20:25
+sharing: true
+footer: true
+head: |
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnlL8giLwoyY0uACjrSSk00rlmL5nqjgI&sensor=false"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-27.467, 153.019),
+          zoom: 14
+        };
+
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var library_marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(-27.4712103, 153.0180717),
+            title: 'State Library of Queensland'
+        });
+
+        var park_marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(-27.4633757, 153.0206507),
+            title: 'Roma Street Parklands'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+---
+
+<h1>When and Where</h1>
+
+The ceremony will take place on the
+<div id="map-canvas-container">
+    <div id="map-canvas" />
+</div>
