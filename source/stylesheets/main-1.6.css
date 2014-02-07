@@ -63,6 +63,18 @@ textarea {
     padding: 0.2em 0;
 }
 
+#map-canvas-container {
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 100%;
+}
+
 
 /* ===== Initializr Styles ==================================================
    Author: Bradley Greenwood
@@ -179,6 +191,48 @@ body {
     font-size: 1em;
 }
 
+.formsection {
+    clear: both;
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+#contactform {
+    width: 80%;
+    margin: auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=textarea],
+input[type=radio],
+textarea {
+    width: 100%;
+    padding: 4px 7px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=textarea]:focus,
+textarea {
+    outline: 0;
+    border-color: #4697e4;
+}
+
+label.radiolabel {
+    margin-left: 4px;
+    margin-right: 12px;
+}
+
+#contactform input[type=textarea],
+#contactform textarea {
+    height: 100px;
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -251,6 +305,11 @@ body {
     color: #fff;
     text-align: center;
 
+}
+
+.centered {
+    text-align: center;
+    vertical-align: center;
 }
 
 #bg-image {
@@ -432,6 +491,26 @@ body {
         height: 400px;
     }
 
+    .formsection label.formheader {
+        width: 25%;
+        float: left;
+        text-align: right;
+        margin-right: 20px;
+        vertical-align: center;
+    }
+
+    .formsection input[type=text] {
+        width: 50%;
+    }
+
+    .formsection input[type=submit]{
+        padding: 4px 20px;
+    }
+
+    .formsection input[type=textarea],
+    .formsection textarea {
+        width: 70%;
+    }
 
 
 /* ========================
