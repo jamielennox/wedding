@@ -1,7 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://jamielennox.github.io/wedding/</loc>
-        <lastmod>2014-01-12T18:56:43+10:00</lastmod>
+        <loc>http://www.jayneandjamie.com/location/</loc>
+        <lastmod>2014-02-08T09:57:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.jayneandjamie.com/rsvp/</loc>
+        <lastmod>2014-02-08T09:57:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.jayneandjamie.com/rsvp/return.html</loc>
+        <lastmod>2014-02-08T09:57:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.jayneandjamie.com/</loc>
+        <lastmod>2014-01-30T22:14:12+10:00</lastmod>
     </url>
 </urlset>

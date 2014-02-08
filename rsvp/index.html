@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         
-            <title>Jayne &amp; Jamie Wedding</title>
+            <title>Jayne &amp; Jamie Wedding | Contact</title>
         
 
         
@@ -28,7 +28,18 @@
 
         <link rel="stylesheet" href="/stylesheets/normalize.min.css">
         <link rel="stylesheet" href="/stylesheets/main-1.6.css">
-        
+        <script type="text/javascript">
+    function validateform() {
+        if (!document.contactform.from.value.match(/\S/)) {
+            alert("Please give us your name");
+            document.contactform.from.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -55,21 +66,53 @@ http://scal.io -- check us out.
         <div id="bg-container">
 
 
+<div class="start-container">
+    <div class="nav-container">
+        <div class="wrapper clearfix">
+<nav id="nav">
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <!--       <li><a href="/location">LOCATION</a></li> -->
+        <!--       <li><a href="/rsvp">RSVP</a></li>  -->
+    </ul>
+</nav>
+
+        </div>
+    </div>
+</div>
+
 <div class="main-container">
     <div class="main wrapper clearfix">
-<div id="header">
-    <div id="introtext">
-        <span class="head-bride">Jayne&nbsp;</span>
-        <span class="head-groom">&amp;</span>
-        <span class="head-bride">Jamie</span>
-        <div class="date">SEPTEMBER 19<sup>th</sup>, 2014</div>
+        <div class="content">
+<form action="http://getsimpleform.com/messages?form_api_token=ccaa2ac9f01672faf35fb5af9aa1c45e" method="post" name="contactform" id="contactform" onsubmit="return validateform()">
+    <input type="hidden" name="redirect_to" value="http://www.jayneandjamie.comrsvp/return.html" />
+
+    <div class="formsection">
+        <label class="formheader" for="from">Your Name:</label>
+        <input type="text" name="from" tabindex="1" value="" />
+    </div>
+    <div class="formsection">
+    <label class="formheader" for="attend">Attending:</label>
+        <input id="attend-yes" name="attend" type="radio" value="Yes" tabindex="2" checked="checked"/>
+        <label class="radiolabel" for="attend-yes">Yes</label>
+        <input id="attend-no" name="attend" type="radio" value="No" tabindex="3"/>
+        <label class="radiolabel" for="attend-no">No</label>
+    </div>
+    <div class="formsection">
+        <label class="formheader" for="message">A message:</label>
+        <textarea name="message" tabindex="4" rows="5" cols="50" ></textarea>
+    </div>
+    <div class="formsection">
+        <label class="formheader" for="submit">&nbsp;</label>
+        <input type="submit" name="submit" value="Send" tabindex="5" />
+    </div>
+</form>
+
+        </div>
     </div>
 </div>
 
-    </div>
-</div>
-
-<div class="abs-container">
+<div class="finish-container">
     <div class="nav-container">
         <div class="wrapper clearfix">
 <nav id="nav">
