@@ -375,6 +375,10 @@ body {
     padding: 0;
 }
 
+.main-container {
+    margin-bottom: 100px;
+}
+
 .abs-container .nav-container {
     position: relative;
     margin-bottom: 20px;
