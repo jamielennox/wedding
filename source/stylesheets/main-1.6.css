@@ -516,6 +516,10 @@ body {
         width: 70%;
     }
 
+    .formsection .radio-option {
+        display: inline-block;
+    }
+
 
 /* ========================
     INTERMEDIATE: IE Fixes
