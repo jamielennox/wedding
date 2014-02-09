@@ -384,6 +384,18 @@ body {
     margin-bottom: 20px;
 }
 
+.start-container .nav-container {
+    position: relative;
+    margin-top: 15px;
+    width:100%;
+}
+
+.finish-container .nav-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -405,17 +417,6 @@ body {
 
     body {
         background-position: 50% 20%;
-    }
-
-    .start-container .nav-container {
-        position: relative;
-        margin-top: 15px;
-        width:100%;
-    }
-
-    .finish-container .nav-container {
-        position: relative;
-        margin-bottom: 20px;
     }
 
     #introtext {
