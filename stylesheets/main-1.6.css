@@ -312,22 +312,25 @@ body {
     vertical-align: center;
 }
 
-#bg-image {
+#bg-image-wrapper {
     position: fixed;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
 }
-#bg-image img {
+
+#bg-image {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
-    min-width: 50%;
-    min-height: 50%;
+
+    background-margin: auto;
+    background-position: center;
+    background-image: url('/images/bg-pic.jpg');
+    background-size: cover;
 }
 
 .content {
@@ -511,6 +514,10 @@ body {
     .formsection input[type=textarea],
     .formsection textarea {
         width: 70%;
+    }
+
+    .formsection .radio-option {
+        display: inline-block;
     }
 
 

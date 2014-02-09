@@ -59,9 +59,7 @@ http://scal.io -- check us out.
 http://scal.io -- check us out.
 ****************************************************************************************************-->
 
-        <div id="bg-image">
-            <img src="/images/bg-pic.jpg" alt="bg" />
-        </div>
+        <div id="bg-image-wrapper"><div id="bg-image"></div></div>
 
         <div id="bg-container">
 
@@ -93,12 +91,18 @@ http://scal.io -- check us out.
     </div>
     <div class="formsection">
         <label class="formheader" for="attend">Attending:</label>
-        <input id="attend-yes" name="attend" type="radio" value="Yes" tabindex="2" checked="checked"/>
-        <label class="radiolabel" for="attend-yes">Yes</label>
-        <input id="attend-no" name="attend" type="radio" value="No" tabindex="3"/>
-        <label class="radiolabel" for="attend-no">No</label>
-        <input id="attend-unsure" name="attend" type="radio" value="Unsure" tabindex="4"/>
-        <label class="radiolabel" for="attend-unsure">Unsure</label>
+        <div class="radio-option">
+            <input id="attend-yes" name="attend" type="radio" value="Yes" tabindex="2" checked="checked"/>
+            <label class="radiolabel" for="attend-yes">Yes</label>
+        </div>
+        <div class="radio-option">
+            <input id="attend-no" name="attend" type="radio" value="No" tabindex="3"/>
+            <label class="radiolabel" for="attend-no">No</label>
+        </div>
+        <div class="radio-option">
+            <input id="attend-unsure" name="attend" type="radio" value="Unsure" tabindex="4"/>
+            <label class="radiolabel" for="attend-unsure">Unsure</label>
+        </div>
     </div>
     <div class="formsection">
         <label class="formheader" for="message">A message:</label>
