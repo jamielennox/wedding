@@ -1,0 +1,108 @@
+---
+layout: page
+title: "accommodation"
+date: 2014-02-22 14:26
+comments: true
+sharing: true
+footer: true
+head: |
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnlL8giLwoyY0uACjrSSk00rlmL5nqjgI&sensor=false"></script>
+
+accom:
+ - name: Evolution Apartments
+   location: 18 Tank Street
+   href: http://www.evolutionapartments.com.au/
+   lat: -27.4685534
+   lng: 153.0195123
+ - name: Rydges
+   location: 9 Glenelg Street
+   href: http://www.rydges.com/accommodation/brisbane-qld/brisbane-cbd/welcome/
+   lat: -27.4780932
+   lng: 153.0195242
+ - name: Meriton Apartments
+   location: 43 Herschel Street
+   href: http://www.meritonapartments.com.au/brisbane
+   lat: -27.4677051
+   lng: 153.0194316
+ - name: Park Regis
+   location: 293 North Quay
+   href: http://www.parkregisnorthquay.com.au/
+   lat: -27.4671568
+   lng: 153.0163688
+ - name: Mercure
+   location: 85–87 North Quay
+   href: http://mercurebrisbane.com.au/
+   lat: -27.4698846
+   lng: 153.0208711
+ - name: Pullman
+   location: Corner Ann & Roma Street
+   href: http://www.pullmanbrisbanekgs.com.au/
+   lat: -27.4682958
+   lng: 153.0232814
+---
+
+<div id="accomintro">
+    These are some of the options located central to the ceremony and reception:
+</div>
+
+<div id="accomodation">
+    <dl id="accomlist">
+        {% for acc in page.accom %}
+            <dd class="accom">
+                <div class="accomimg">
+                    <img src="http://www.google.com/mapfiles/marker{{ forloop.index | plus: 64 | to_char }}.png" height="34" width="20" onclick="toggleBounce(marker_{{ forloop.index }})" />
+                </div>
+                <div class="accomdata">
+                    <span class="title"><a href="{{ acc.href }}">{{ acc.name }}</a></span>
+                    <span class="location">{{ acc.location }}</span>
+                </div>
+            </dd>
+        {% endfor %}
+    </dl>
+
+    <div id=map-canvas-container>
+        <div id="map-canvas"></div>
+    </div>
+</div>
+
+<div id="accomfinal">
+    These are just suggestions, anything in the city or South Bank will work.
+</div>
+
+<script type="text/javascript">
+    var mapOptions = {
+      center: new google.maps.LatLng(-27.472292684636212, 153.01805586242676),
+      zoom: 15
+    };
+
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var infowindow = new google.maps.InfoWindow();
+
+    function toggleBounce(marker) {
+        if (marker.getAnimation() != null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+            setTimeout(function(){ marker.setAnimation(null); }, 750);
+        }
+    }
+
+    {% for acc in page.accom %}
+        var image = new google.maps.MarkerImage('http://www.google.com/mapfiles/marker{{ forloop.index | plus: 64 | to_char }}.png',
+                                                new google.maps.Size(20, 34),
+                                                new google.maps.Point(0, 0),
+                                                new google.maps.Point(10, 34))
+
+        var marker_{{ forloop.index }} = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng({{ acc.lat }}, {{ acc.lng }}),
+            title: '{{ acc.name }}',
+            icon: image,
+        });
+
+        google.maps.event.addListener(marker_{{ forloop.index }}, 'click', function() {
+            infowindow.setContent('<a href="{{ acc.href }}">{{ acc.name }}</a>');
+            infowindow.open(map, marker_{{ forloop.index }});
+        });
+    {% endfor %}
+</script>
