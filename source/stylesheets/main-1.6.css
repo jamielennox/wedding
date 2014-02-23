@@ -82,6 +82,11 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background: url('/images/bg-pic.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .wrapper {
@@ -318,19 +323,6 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-}
-
-#bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-margin: auto;
-    background-position: center;
-    background-image: url('/images/bg-pic.jpg');
-    background-size: cover;
 }
 
 .content {
