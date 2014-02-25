@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="{{site.root}}stylesheets/normalize.min.css">
         <link rel="stylesheet" href="{{site.root}}stylesheets/main-1.6.css">
         {{ page.head }}
+        <script src="{{site.root}}js/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -51,5 +52,7 @@ http://scal.io -- check us out.
                                                     |___/                                      |___/
 http://scal.io -- check us out.
 ****************************************************************************************************-->
-
+        <!--[if lt IE 9]>
+        <div id="bg-image-wrapper"><img src="{{site.root}}images/bg-pic.jpg"></div>
+        <![endif]-->
         <div id="bg-container">
