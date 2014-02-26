@@ -65,15 +65,19 @@ textarea {
 }
 
 #map-canvas-container {
-    display: block;
-    position: relative;
-    width: 400px;
+    display: inline-block;
+    width: 100%;
     height: 400px;
+    margin: 0 auto;
 }
 
 #map-canvas {
     width: 100%;
     height: 100%;
+}
+
+dd {
+    margin: 0 0 0 10px;
 }
 
 
@@ -269,6 +273,47 @@ label.radiolabel {
     height: 100px;
 }
 
+dl#accomlist {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+dd.accom {
+    padding-bottom: 15px;
+}
+
+.accomdata {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#accomodation {
+    padding: 35px 0;
+}
+
+#accomfinal {
+    clear: both;
+}
+
+.accomimg {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+
+#accomlist img {
+    vertical-align: middle;
+}
+
+#accomlist span.title {
+    display: block;
+}
+
+#accomlist span.location {
+    display: block;
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -415,6 +460,7 @@ body {
 .finish-container .nav-container {
     position: relative;
     margin-bottom: 20px;
+    clear: both;
 }
 
 
@@ -499,6 +545,10 @@ body {
         transition: all .3s ease;
     }
 
+    dd {
+        margin: 0 0 0 40px;
+    }
+
     .content {
         padding: 40px 40px 70px 40px;
     }
@@ -509,13 +559,16 @@ body {
         font-size: 1.7em;
     }
 
-
     .column p {
         font-size: 1.1em;
     }
 
     #gmap iframe {
         height: 400px;
+    }
+
+    #map-canvas-container {
+        width: 100%;
     }
 
     .formsection label.formheader {
@@ -641,6 +694,11 @@ body {
         padding: 0 20px;
     }
 
+    #map-canvas-container {
+        width: 60%;
+        float: right;
+        padding-right: 40px;
+    }
 }
 
 
