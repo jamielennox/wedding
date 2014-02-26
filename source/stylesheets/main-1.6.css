@@ -61,6 +61,7 @@ textarea {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+    z-index: 10;
 }
 
 #map-canvas-container {
@@ -92,6 +93,10 @@ body {
     background-size: cover;
 }
 
+#bg-image-wrapper {
+    z-index:-10;
+}
+
 .backgroundsize #bg-image-wrapper {
     display: none;
 }
@@ -104,15 +109,15 @@ body {
      height: 200%;
 }
 
-.no-backgroundsize #bg-image-wrapper img {
+.no-backgroundsize #bg-image-wrapper img, .no-js #bg-image-wrapper img {
      position: absolute;
      top: 0;
      left: 0;
      right: 0;
      bottom: 0;
      margin: auto;
-     min-width: 50%;
-     min-height: 50%;
+     min-width: 100%;
+     min-height: 100%;
 }
 
 .wrapper {
