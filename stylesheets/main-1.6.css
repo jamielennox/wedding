@@ -61,6 +61,7 @@ textarea {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+    z-index: 10;
 }
 
 #map-canvas-container {
@@ -96,13 +97,13 @@ body {
     display: none;
 }
 
-.no-backgroundsize #bg-image-wrapper {
-     position: fixed;
-     top: -50%;
-     left: -50%;
-     width: 200%;
-     height: 200%;
-}
+/* .no-backgroundsize #bg-image-wrapper { */
+/*      position: fixed; */
+/*      top: -50%; */
+/*      left: -50%; */
+/*      width: 200%; */
+/*      height: 200%; */
+/* } */
 
 .no-backgroundsize #bg-image-wrapper img {
      position: absolute;
@@ -111,8 +112,8 @@ body {
      right: 0;
      bottom: 0;
      margin: auto;
-     min-width: 50%;
-     min-height: 50%;
+     min-width: 100%;
+     min-height: 100%;
 }
 
 .wrapper {
