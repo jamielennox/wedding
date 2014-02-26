@@ -82,17 +82,21 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    background: url('/images/bg-pic.jpg') center center fixed;
 }
 
 .backgroundsize body {
+    background: url('/images/bg-pic.jpg') center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.lt-ie-9 #bg-image-wrapper {
+.backgroundsize #bg-image-wrapper {
+    display: none;
+}
+
+.no-backgroundsize #bg-image-wrapper {
      position: fixed;
      top: -50%;
      left: -50%;
@@ -100,15 +104,15 @@ body {
      height: 200%;
 }
 
-.lt-ie-9 #bg-image-wrapper img {
+.no-backgroundsize #bg-image-wrapper img {
      position: absolute;
      top: 0;
      left: 0;
      right: 0;
      bottom: 0;
      margin: auto;
-     min-width: 100%;
-     min-height: 100%;
+     min-width: 50%;
+     min-height: 50%;
 }
 
 .wrapper {
