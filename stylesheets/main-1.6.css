@@ -93,19 +93,23 @@ body {
     background-size: cover;
 }
 
+#bg-image-wrapper {
+    z-index:-10;
+}
+
 .backgroundsize #bg-image-wrapper {
     display: none;
 }
 
-/* .no-backgroundsize #bg-image-wrapper { */
-/*      position: fixed; */
-/*      top: -50%; */
-/*      left: -50%; */
-/*      width: 200%; */
-/*      height: 200%; */
-/* } */
+.no-backgroundsize #bg-image-wrapper {
+     position: fixed;
+     top: -50%;
+     left: -50%;
+     width: 200%;
+     height: 200%;
+}
 
-.no-backgroundsize #bg-image-wrapper img {
+.no-backgroundsize #bg-image-wrapper img, .no-js #bg-image-wrapper img {
      position: absolute;
      top: 0;
      left: 0;
