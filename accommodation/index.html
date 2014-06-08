@@ -94,8 +94,8 @@ http://scal.io -- check us out.
                     <img src="http://www.google.com/mapfiles/markerB.png" height="34" width="20" onclick="toggleBounce(marker_2)" />
                 </div>
                 <div class="accomdata">
-                    <span class="title"><a href="http://www.rydges.com/accommodation/brisbane-qld/brisbane-cbd/welcome/">Rydges</a></span>
-                    <span class="location">9 Glenelg Street</span>
+                    <span class="title"><a href="http://www.ibis.com/gb/hotel-2062-ibis-brisbane/index.shtml">Ibis</a></span>
+                    <span class="location">27-35 Turbot Street</span>
                 </div>
             </dd>
         
@@ -152,7 +152,7 @@ http://scal.io -- check us out.
 
 <script type="text/javascript">
     var mapOptions = {
-      center: new google.maps.LatLng(-27.472292684636212, 153.01805586242676),
+      center: new google.maps.LatLng(-27.467579, 153.01923),
       zoom: 15
     };
 
@@ -193,13 +193,13 @@ http://scal.io -- check us out.
 
         var marker_2 = new google.maps.Marker({
             map: map,
-            position: new google.maps.LatLng(-27.4780932, 153.0195242),
-            title: 'Rydges',
+            position: new google.maps.LatLng(-27.469154, 153.02114),
+            title: 'Ibis',
             icon: image,
         });
 
         google.maps.event.addListener(marker_2, 'click', function() {
-            infowindow.setContent('<a href="http://www.rydges.com/accommodation/brisbane-qld/brisbane-cbd/welcome/">Rydges</a>');
+            infowindow.setContent('<a href="http://www.ibis.com/gb/hotel-2062-ibis-brisbane/index.shtml">Ibis</a>');
             infowindow.open(map, marker_2);
         });
     
