@@ -71,7 +71,19 @@ textarea {
     margin: 0 auto;
 }
 
+#map-canvas-container-roma {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+
 #map-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#map-canvas-roma {
     width: 100%;
     height: 100%;
 }
@@ -467,6 +479,11 @@ body {
     clear: both;
 }
 
+#roma-parkland {
+    margin: 5% auto;
+    display: block;
+    max-width: 100%;
+}
 
 /* ==========================================================================
    Media Queries
@@ -702,6 +719,13 @@ body {
         width: 60%;
         float: right;
         padding-right: 40px;
+    }
+
+    #map-canvas-container-roma {
+        width: 80%;
+        float: center;
+        display: block;
+        padding: 5%;
     }
 }
 
