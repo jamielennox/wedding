@@ -131,6 +131,11 @@ body {
     margin: 0 5%;
 }
 
+#wanderable {
+    display: block;
+    max-width: 85%;
+    margin: auto;
+}
 
 /* =============================================================================
    GOOGLE MAPS
