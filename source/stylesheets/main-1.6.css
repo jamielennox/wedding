@@ -247,7 +247,6 @@ input[type=email],
 input[type=textarea],
 input[type=radio],
 textarea {
-    width: 100%;
     padding: 4px 7px;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
